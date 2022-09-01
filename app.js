@@ -5,6 +5,9 @@ const PAPER = 'БУМАГА'
 const SCISSORS = 'НОЖНИЦЫ'
 const DRAW = 'НИЧЬЯ'
 
+ let pcCount = 0;
+  let playerCount = 0;
+
 function randomChoice() {
   const random = Math.random();
 
@@ -27,7 +30,17 @@ function playerChoice() {
 }
 
 start.addEventListener('click', function() {
+  
   const compChoice = randomChoice()
   const pChoice = playerChoice()
-  if(compChoice === SCISSORS && )
+  if(compChoice === SCISSORS && pChoice === PAPER ||
+    compChoice === ROCK && pChoice === SCISSORS ||
+    compChoice === PAPER && pChoice === ROCK
+    ) {
+      alert(`Победа компьютера: ${compChoice} VS ${pChoice}. Счёт: PC ${++pcCount} - ТВОЙ ${playerCount}`)
+    } else if(compChoice === pChoice) {
+      alert(`${DRAW}: ${compChoice} VS ${pChoice}. Счёт: PC ${++pcCount} - ТВОЙ ${++playerCount}`)
+    } else {
+      alert(`Победа! ${pChoice} VS ${compChoice}. Счёт: PC ${pcCount} - Игрок ${++playerCount}`)
+    }
 })
