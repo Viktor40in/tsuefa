@@ -22,11 +22,14 @@
   left: 0;
   bottom: 0;
   background-color: rgba(0,0,0, 0.103);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .title {
-  margin-top: 25px;
+  margin: 25px 0;
   font-size: 50px;
   text-align: center;
   font-family: Oswald;
@@ -34,17 +37,38 @@
   color: #fcfbf5;
 }
 
-.content {
+.content{
   width: 600px;
   height: 500px;
   background-color: #fcfbf5;
   border-radius: 10px;
-  margin: auto;
-  opacity: 0.5;
+  opacity: 0.9;
   box-shadow: 0 0 1px;
-} 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
 
-button{
-  color: blue
-  
+.start {
+  width: 150px;
+  height: 150px;
+  background-color: gold;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.start:active {
+  box-shadow: 0px 0px 4px black;
+}
+
+div span {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: Oswald;
 }

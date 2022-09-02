@@ -1,4 +1,5 @@
 const start = document.querySelector('.start')
+const playWindow = document.querySelector('.content')
 
 const ROCK = 'КАМЕНЬ';
 const PAPER = 'БУМАГА'
@@ -30,7 +31,6 @@ function playerChoice() {
 }
 
 start.addEventListener('click', function() {
-  
   const compChoice = randomChoice()
   const pChoice = playerChoice()
   if(compChoice === SCISSORS && pChoice === PAPER ||
